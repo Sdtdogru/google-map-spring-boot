@@ -6,6 +6,7 @@ import com.example.googlemapspringboot.service.CoordinatesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
@@ -23,6 +24,7 @@ public class CoordinatesController {
     @Autowired
     CoordinatesService service;
 
+    @CrossOrigin(origins = "http://localhost:8080")
     @GetMapping("/nearby-search/{lat}/{lng}/{rad}")
     public ResponseEntity<Object> nearbySearch(@PathVariable("lat") BigDecimal lat, @PathVariable("lng") BigDecimal lng, @PathVariable("rad") int rad){
 
