@@ -19,7 +19,7 @@ public class Places {
 
     @ManyToOne
     @JoinColumn(name="coordinates", nullable=false)
-    private Coordinates nearby;
+    private Coordinates coordinates;
 
 
 }
