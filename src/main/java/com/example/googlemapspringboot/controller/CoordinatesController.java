@@ -25,7 +25,7 @@ public class CoordinatesController {
     @Autowired
     CoordinatesService service;
 
-    @CrossOrigin(origins = "http://localhost:8080")
+    @CrossOrigin(origins = "https://google-map-vue.herokuapp.com/")
     @GetMapping("/nearby-search/{lat}/{lng}/{rad}")
     public ResponseEntity<Object> nearbySearch(@PathVariable("lat") BigDecimal lat, @PathVariable("lng") BigDecimal lng, @PathVariable("rad") int rad){
 
