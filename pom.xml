@@ -14,7 +14,7 @@
     <name>google-map-spring-boot</name>
     <description>google-map-spring-boot</description>
     <properties>
-        <java.version>11</java.version>
+        <java.version>8</java.version>
     </properties>
     <dependencies>
         <dependency>
